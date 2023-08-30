@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&family=Raleway&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --bg-color: linear-gradient(80deg, rgb(2, 75, 2), #01022f);
+}
+
+main,
+body,
+footer {
+    background: #01022f;
+}
+
+/*Navbar*/
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 26px;
+    background: rgba(0, 0, 0, 0.534);
+    position: fixed;
+    z-index: 1;
+}
+
+
+
+img.piratex_logo {
+    width: 160px;
+    height: 30px;
+}
+
+.buttons-nav {
+    display: flex;
+
+}
+
+.buttons-nav button,
+a.login-page {
+
+    color: white;
+    border: none;
+    font-weight: 900;
+    background: none;
+}
+
+a.login-page {
+    margin-right: 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.buttons-nav .nav-assine {
+    background: green;
+    border-radius: 2rem;
+    padding: 0.1rem 2rem;
+    transition: 2s;
+
+}
+
+.buttons-nav .nav-assine:hover {
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+/*conteúdo*/
+/*background header*/
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0 300px;
+    color: white;
+    background: var(--bg-color);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite alternate;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    background: linear-gradient(0deg, #010227, transparent);
+    position: absolute;
+    height: 15rem;
+    width: 100%;
+    bottom: 0;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* conteudo header */
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    gap: 2rem;
+
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-texto h1 {
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+.header-texto p {
+    font-size: 4.5rem;
+    font-weight: 900;
+
+}
+
+/*linha de divisao*/
+.divisao {
+    align-self: center;
+    width: 80%;
+    background: var(--bg-color);
+    height: 0.5rem;
+}
+
+/*preço*/
+.preco {
+    margin-top: 0.8rem;
+}
+
+.preco p {
+    font-size: 1.8rem;
+}
+
+.preco p.number {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.preco p.number span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/*botao e animação do botao*/
+button.assine-agora {
+    font-size: 1.2rem;
+    background: none;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    color: white;
+    transition: .5s;
+    overflow: hidden;
+    animation: animacao 2s ease-in-out infinite;
+    position: relative;
+    border: none;
+    cursor: pointer;
+}
+
+button.assine-agora::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: green;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: width 1s;
+
+}
+
+button.assine-agora:hover::before {
+    width: 0%;
+}
+
+button.assine-agora:hover {
+    border: 1px solid green;
+
+}
+
+
+@keyframes animacao {
+    0% {
+        transform: rotate(0);
+    }
+
+    15% {
+        transform: rotate(-15deg)
+    }
+
+    20% {
+        transform: rotate(10deg)
+    }
+
+    25% {
+        transform: rotate(-10deg)
+    }
+
+    30% {
+        transform: rotate(10deg)
+    }
+
+    35% {
+        transform: rotate(-10deg)
+    }
+
+    40%,
+    100% {
+        transform: rotate(0)
+    }
+}
+
+/*ultimo texto header*/
+.texto-pequeno {
+    align-self: center;
+    width: 40%;
+}
+
+/*Section Plans*/
+
+#plans {
+    background: url('/assests/images/background-movies-series.png'), #01022f;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1200px;
+    color: white;
+}
+
+.title h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+/*CARD PREÇOS E BENEFICIOS*/
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    max-width: 1200px;
+}
+
+/*card mobile*/
+
+.plan-mobile {
+    width: 45%;
+    background: linear-gradient(0deg, transparent, #01022f);
+    padding: 40px 60px;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.valor-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.valor-mobile p.mobile {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.valor-mobile p.valor {
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+}
+
+.lista-beneficios ul {
+    margin-top: 4rem;
+}
+
+.lista-beneficios ul li {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+button.botao-mobile {
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 15px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: none;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    transition: .5s;
+    margin-top: 8.4rem;
+
+}
+
+button.botao-mobile p {
+    z-index: 2;
+    position: relative;
+
+}
+
+
+button.botao-mobile::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: green;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transition: width 1s;
+
+}
+
+button.botao-mobile:hover::before {
+    width: 0%;
+}
+
+button.botao-mobile:hover {
+    border: 1px solid green;
+    transform: scale(1.1);
+}
+
+/*card Multitelas*/
+.plan-multitelas {
+    width: 45%;
+    background: linear-gradient(0deg, transparent, #01022f);
+    padding: 40px 60px;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.valor-multitelas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.valor-multitelas p.multitelas {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.valor-multitelas p.valor {
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+}
+
+.lista-beneficios-multitelas ul {
+    margin-top: 3rem;
+}
+
+.lista-beneficios-multitelas ul li {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+button.botao-multitelas {
+    margin-top: 4rem;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 15px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: none;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    transition: .5s;
+
+}
+
+button.botao-multitelas p {
+    z-index: 2;
+    position: relative;
+
+}
+
+
+button.botao-multitelas::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: green;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transition: width 1s;
+
+}
+
+button.botao-multitelas:hover::before {
+    width: 0%;
+
+}
+
+button.botao-multitelas:hover {
+    border: 1px solid green;
+    transform: scale(1.1);
+}
+
+/*section contents*/
+section#contents h2 {
+    text-align: center;
+}
+
+.contents {
+    margin: 200px auto;
+}
+
+.contents-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.contents-card {
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: transform 0.8s, background 0.8s;
+}
+
+.contents-card:hover {
+    transform: scale(1.05);
+}
+
+.contents-card:hover .contents-image {
+    opacity: 0;
+}
+
+.contents-image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+}
+
+
+.contents-card:nth-child(1):hover {
+    background-image: url("/assests/images/hbo-hover_0.webp");
+    cursor: pointer;
+
+}
+
+.contents-card:nth-child(2):hover {
+    background-image: url("/assests/images/MAX-Hover.webp");
+    cursor: pointer;
+}
+
+.contents-card:nth-child(3):hover {
+    background-image: url("/assests/images/DC-Hover.webp");
+    cursor: pointer;
+}
+
+.contents-card:nth-child(4):hover {
+    background-image: url("/assests/images/WB-Hover.webp");
+    cursor: pointer;
+}
+
+.contents-card:nth-child(5):hover {
+    background-image: url("/assests/images/CN-Hover.png");
+    cursor: pointer;
+}
+
+.contents-card:nth-child(6):hover {
+    background-image: url("/assests/images/UCL-Hover.webp");
+    cursor: pointer;
+}
+
+/*rodapé*/
+footer {
+    height: 5rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.links-uteis a {
+    text-decoration: none;
+    color: green;
+    font-weight: 900;
+    margin-right: 1.5rem;
+    transition: 1s;
+}
+
+.links-uteis a:hover {
+    color: white;
+}
+
+.footer p {
+    color: white;
+    margin-top: 2rem;
+}
+
+/** ABA LOGIN**/
+
+.content {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body#login {
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    padding: 24px;
+}
+
+.menu {
+    position: relative;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(0, 128, 0, 0.356);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px;
+}
+
+.login-title {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    color: white;
+}
+
+.login-label {
+    text-align: left;
+    color: white;
+}
+
+.login-field {
+    background: #01022f;
+    border: green;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 1rem;
+}
+
+.login-field::placeholder {
+    color: green;
+}
+
+.login-field:invalid {
+    border-color: red;
+}
+
+.login-actions {
+    margin-top: 24px;
+    text-align: left;
+}
+
+.login-link {
+    color: green;
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.login-link:hover {
+    color: white;
+}
+
+.button-gradient {
+    font-size: 1.2rem;
+    font-weight: 900;
+    background:  #01022f;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    color: green;
+    border: none;
+    cursor: pointer;
+    transition: 2s;
+}
+.button-gradient:hover{
+    background-color: green;
+    color: white;
+
+}
